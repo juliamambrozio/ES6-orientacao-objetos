@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de declarações de váriaveis VAR e LET</title>
+
+    <script>
+        //escopos: global (disponível para tudo), função (são isolados do escopo global, não são elevadas para o nível global) e bloco
+        //escopos: bloco -> função -> global ou bloco -> global
+
+        //var serie = 'Friends'
+        
+        /* function x(){
+            var serie = 'Game of Thrones'
+            console.log('função: '+ serie)
+           console.log('Dentro da função ' + serie)
+            if(true){
+                var serie = "SuperNatural"
+                console.log('Bloco dentro da função: ' + serie)
+                console.log(serie)
+            }
+        }
+        x()
+
+        if(true){
+            console.log(serie)
+            
+        }
+        console.log(serie) */
+
+        if(true){
+            let serie = "Friends" //let: preserva o escopo, já o if não
+            var serie2 = "SuperNatural"
+
+        }
+        console.log(serie)
+        console.log(serie2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

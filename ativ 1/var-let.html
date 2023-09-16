@@ -29,13 +29,30 @@
         }
         console.log(serie) */
 
-        if(true){
+        /* if(true){
             let serie = "Friends" //let: preserva o escopo, já o if não
             var serie2 = "SuperNatural"
 
         }
         console.log(serie)
-        console.log(serie2)
+        console.log(serie2) */
+
+        var serie = 'Friends'
+        var comida = 'Banana'
+
+        {
+            var serie = 'The Walking Dead'
+            console.log('Dentro do bloco ' + serie )
+            let comida = 'Maçã'
+            console.log('Dentro do bloco ' + comida) //não substitui o valor da var
+
+
+        }
+
+        console.log(serie)
+        console.log(comida)
+
+
     </script>
 </head>
 <body>

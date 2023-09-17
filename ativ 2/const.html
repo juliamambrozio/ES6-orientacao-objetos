@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Const</title>
+    <script>
+        const SERIE = 'SuperNatural' //para constantes é melhor usar caracter maiúsculos e precisa já ser atribuído um valor
+
+        function x(){
+            const SERIE = 'The Walking Dead'
+            console.log(SERIE) //impede que o operador o modifique, serve quando você não quiser modoificar o valor durante a aplicação
+        }
+
+        x()
+
+        console.log(SERIE)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

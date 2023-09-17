@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parâmetros Default</title>
+    <script>
+        function contarUmaHistoria(personagem = 'Titi', atividade = 'brincar', nome_dono = 'Júlia'){
+            document.write(`Era uma vez uma coelha chamada ${personagem}, ela adorava ${atividade}, seu dono era a ${nome_dono} e elas viveram felizes para sempre`)
+        }
+
+        contarUmaHistoria(undefined, 'Correr', 'Matheus') //substituindo valores
+        //undefined: não atribuirá um valor substituindo o do parâmetro default
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

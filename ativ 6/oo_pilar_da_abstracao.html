@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OO - Pilar da Abstração</title>
+    <script>
+        //modelo da objeto (entidade)
+        class ContaBancaria{
+            //agência, numConta, saldo e limite
+            constructor(){
+                this.agencia = 1075 //this = conexão do contexto ao objeto (de onde aquela var existe)
+                this.numConta = 8351125
+                this.saldo = 50
+                this.limite = 450
+            }
+
+            depositar(valorDeposito){ //function
+                this.saldo += valorDeposito
+            }
+
+            sacar(valorSaque){
+                this.saldo -= valorSaque
+            }
+
+            consultarSaldo(){
+                return this.saldo
+            }
+        }
+
+        let x = new ContaBancaria //new = indica pro interpretador transformar o modelo em objeto para ser usado
+        let y = new ContaBancaria //pode ser usado várias vezes, até porque são objetos distintos
+
+        console.log(x.consultarSaldo()) //. = serve para acessarmos os metódos
+
+        x.depositar(450)
+        console.log(x.consultarSaldo())
+
+        x.sacar(200)
+        console.log(x.consultarSaldo())
+
+
+        console.log(y.consultarSaldo()) //não modificou o saldo dessa conta
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

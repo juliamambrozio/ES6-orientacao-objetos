@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação Objeto - Encapsulamento</title>
+    <script>
+        class Tv{
+            constructor(){
+                this._relacaoCanais = Array(2, 4, 5, 7, 10) //_ = serve para indicar ao programador que o atibuto é privado
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+            //getters setters (proteger dados)
+            get canalAtivo(){ //retorna valor
+                return this._canalAtivo
+            }
+            set canalAtivo(canal){ //para alterar o valor
+                let x = this._relacaoCanais.indexOf(canal)
+                if(x === -1){
+                    console.log('Canal não existe')
+                } else{
+                }
+                this._canalAtivo = canal
+            }
+        }
+
+        let tv = new Tv()
+
+        tv.canalAtivo = 7
+        console.log(tv.canalAtivo)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

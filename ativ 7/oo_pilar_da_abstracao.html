@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação Objeto - Pilar da Abstração</title>
+    <script>
+        //um software para marcenaria 
+        //cadeira e sofá
+
+        //paradigma procedural
+
+        //cadeira 
+        /* let qtde_pernas = 4
+        let giratoria = false 
+        let cor = 'azul' */
+
+        //array de cadeiras
+      /*   let  cadeiras = Array()
+        cadeiras[0] = Array()
+        cadeiras[0]['qtde_pernas'] = 4
+        cadeiras[0]['giratoria'] = false 
+        cadeiras[0]['cor'] = 'azul'
+
+        cadeiras[1] = Array()
+        cadeiras[1]['qtde_pernas'] = 1
+        cadeiras[1]['giratoria'] = true 
+        cadeiras[1]['cor'] = 'vermelha'
+        console.log(cadeiras)
+
+        function girar_cadeira(indice){
+            if(cadeiras[indice]['giratoria'] === true){
+                console.log('Girou')
+
+            } else{
+                console.log('Cadeira não é giratória')
+            }
+        }
+
+        girar_cadeira(1)
+
+        function adicionar_cadeira(qntde_pernas, giratoria, cor){
+            let cadeira = Array()
+            cadeira['qntde_pernas'] = qntde_pernas
+            cadeira['giratoria'] = giratoria 
+            cadeira['cor'] = cor 
+            cadeiras.push(cadeira)
+        }   
+
+        adicionar_cadeira(3, false, 'verde') */
+
+        //paradigma de OO
+
+        class Cadeira {
+            constructor(qntde_pernas, giratoria, cor){
+                this.qntde_pernas = qntde_pernas //this = atributo do próprio objeto (class)
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+
+            girarCadeira(){
+                if(this.giratoria === true){
+                    console.log('Girou')
+                }else{
+                    console.log('Cadeira não é giratória')
+                }
+            }
+        }
+
+        let cadeiras = Array()
+
+        cadeiras.push(new Cadeira(1, true, 'vermelha'))
+        cadeiras.push(new Cadeira(4, false, 'azul'))
+
+        console.log(cadeiras)
+
+        class Sofa{
+            constructor(cor, qntde_lugares, reclinavel){
+                this.cor = cor
+                this.qntde_lugares = qntde_lugares
+                this.reclinavel = reclinavel
+            }
+            reclina_sofa(){
+                if(this.reclinavel === true){
+                    console.log('Reclinar sofá')
+                }else{
+                    console.log('Não reclinável')
+                }
+            }
+        }
+
+        let sofas =Array() 
+
+        sofas.push(new Sofa('Amarelo', 2, false))
+        sofas.push(new Sofa('Rosa', 4, true))
+
+        console.log(sofas)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

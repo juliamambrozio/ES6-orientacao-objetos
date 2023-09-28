@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação Objeto - Operador Super</title>
+    <script>
+         class Animal{
+            constructor(cor, tamanho, peso){
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+            
+            dormir(){
+                console.log('Dormir')
+            }
+        }
+        class Passaro extends Animal{
+            constructor(bico, cor, tamanho, peso){
+                super(cor, tamanho, peso) //acesso ao constructor da classe pai
+                this.bico = bico
+            }
+
+            voar(){
+                console.log('voar')
+            }
+        }
+
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso){
+                super('Médio', cor, tamanho, peso) //acesso ao constructor da classe pai. Vai pegando o valor em formato de cascata
+                this.sabeFalar = sabeFalar
+            }
+
+            falar(){
+                console.log('Falar')
+            }
+        }
+
+        let papagaio = new Papagaio(true, 'verde', 25, 350)
+        console.log(papagaio)
+        let papagaio2 = new Papagaio(true, 'rosa', 25, 350)
+        console.log(papagaio2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

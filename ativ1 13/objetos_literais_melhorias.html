@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação Objeto - Objetos Literais/Estáticos</title>
+    <script>
+       let nome = 'Jorge' //document.getElementById().value
+       let idade = 19
+       let sexo = 'Masculino'
+       let profissao = 'Programador'
+
+       let objeto = {
+        nome: nome,
+        idade: idade,
+        sexo: sexo,
+        profissao: profissao,
+        exibirResumo: function(){
+            document.write(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+        }
+       }
+
+       console.log(objeto)
+       objeto.exibirResumo()
+
+
+       document.write('<br />')
+
+
+       let objeto2 = {
+        nome, //quando tem o mesmo nome, podemos omitir (par valor = valor da var)
+        idade,
+        sexo,
+        profissao,
+        exibirResumo(){
+            document.write(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+        }
+       }
+
+       objeto2.exibirResumo()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

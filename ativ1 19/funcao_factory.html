@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Factory</title>
+    <script>
+        let Bicicleta1 = {
+            cor: 'Branca',
+            marcha: 'única',
+            aro:12,
+            pedalar(){
+                console.log('Método pedalar executado')
+            }
+
+            
+        }
+
+        let Bicicleta2 = {
+            cor: 'vermelha',
+            marcha: 'única',
+            aro:12,
+            pedalar(){
+                console.log('Método pedalar executado')
+            }
+
+            
+        }
+
+        console.log(Bicicleta1)
+        console.log(Bicicleta2)
+
+//-----------------FUNÇÃO FACTORY-----------------
+        let BicicletaFactory = function(cor, marcha, aro){
+            //lógica
+            //requisição http
+            //resposta http
+            //Não precisa incluir várias vezes, é só criar um método
+            return{
+                cor: cor, //não precisa colocar o valor quando são iguais
+                marcha: marcha,
+                aro: aro,
+                pedalar(){
+                    console.log('Método pedalar executado')
+                }
+            }
+        }
+
+        let Bicicleta3 = BicicletaFactory('Vermelha', 18, 26)
+        console.log(Bicicleta3)
+
+        let Bicicleta4 = BicicletaFactory('Rosa', 18, 26)
+        console.log(Bicicleta4)
+
+        console.log(Bicicleta3.cor)
+        Bicicleta3.pedalar()
+
+        console.log(Bicicleta4.cor)
+        Bicicleta4.pedalar()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

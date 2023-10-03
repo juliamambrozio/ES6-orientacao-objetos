@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Chain</title>
+    <script>
+        Object.prototype.attr50 = 'z' //animal herda o prototype, cuidado porque será criado globalmente, podendo afetar toda a aplicação
+        let animal = {attr1: 'a'}
+        let vertebrado = {__proto__: animal, attr2: 'b'}
+        let ave = { __proto__:vertebrado,attr3: 'c', attr2: 'x'} //attr2: herdará o mais próximo, ou seja, o que está contido no objeto ave
+        //__proto__: herdando prototype
+
+        console.log(ave.attr2, ave.attr1, ave.attr50)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment - OBJETOS</title>
+    <script>
+        let produto = {
+            //composição 
+            descricao: 'Notebook', //É um
+            preco: 1800,
+            detalhes: { //Tem um
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+        
+
+        let {descricao, preco} = produto
+        //array => []
+        //objeto => {}
+        console.log(descricao, preco)
+        
+        let {descricao: d, preco: p} = produto
+        //atribuindo descricao a var "d" e preço a var "p"
+        console.log(d, p)
+
+        let {descricao: desc, preco: prec, desconto = 5} = produto
+
+        console.log(desc, prec, desconto)
+
+        let {detalhes: {fabricante: f, modelo: m}} = produto
+      
+        console.log(f, m)
+        
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

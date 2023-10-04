@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment</title>
+    <script>
+        //Operador de desestruturação, tira valor de dentro da estrutura
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+        //Muito verboso
+       /* let a = frutas[0]
+        let b = frutas[1]
+        let c = frutas[2] */
+
+        //desestruturação = [valores que você quer pegar]
+
+        //let [ a, b, , c] = frutas //, , = pular um índice
+
+        let [ a, b, c, d, e = 'Banana'] = frutas //não existe posição 4, então atribuí ela
+        
+        console.log(a, b, c, d, e)
+
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']]
+
+        let [, [, z]] = coisas //pulo o primeiro array e depois pulo o primeiro elemento dele
+        console.log(z)
+        
+        let [[, , y]] = coisas //pulo apenas o primeiro elemento
+        console.log(y)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

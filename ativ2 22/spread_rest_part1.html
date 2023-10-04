@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Spread/Rest</title>
+    <script>
+        //SPREAD
+        //String
+        let tituloArtigo = 'Como utilizar o operador rest/spread'
+
+        console.log(tituloArtigo)
+        console.log(...tituloArtigo) //símbolo: ...
+        console.log([...tituloArtigo])
+
+        //Array
+        let listaCursos1 = ['NodeJS e MongoDB', 'ES6, TypeScript e Angular 5']
+        let listaCursos2 = ['Multiplataforma Android/IOS', 'Introdução ao ONU/Linux']
+        let listaCursosCompleto = ['Web Completo', 'Android Completo', ...listaCursos1, ...listaCursos2]
+        console.log(listaCursosCompleto) //espalhamos (colocamos todos os dados)
+
+        //Objetos
+        let pessoa = {
+            nome: 'João',
+            idade: 27,
+        }
+        let clone = {
+           endereco: 'Rua ABC', ...pessoa
+        }
+
+        console.log(clone)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment</title>
+    <script>
+        //Array
+        /* let arr = [10, 20, 30, 40]
+        function teste([ a, b,  , c, d = 50] ){
+            console.log(a, b, c, d)
+
+        }
+
+        teste(arr) */
+
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40
+        }
+
+        let obj2 = {
+            a: 20,
+            b: 26,
+            c: 50,
+            d: 34
+        }
+        function teste({ a: x, b, e = 33 }){
+            console.log(x, b, e)
+        }
+        teste(obj)
+        teste(obj2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+APP ORÇAMENTO PESSOAL: cadastro das despesas, armazenando dados no lado 
+do cliente, convertendo dados para JSON, criando Id automaticamente 
+no armazenamento, pegando todos os dados do sistema e verificando se 
+estão preenchidos, janela modal, Jquery para exbição de Id, modificando 
+conteúdo do html de acordo com a mensagem, colocando todos os registros 
+na outra página (utilizando onload, push, array), função continue, 
+percorrendo elementos do Array, colocando objetos de forma dinâmica 
+nos registros, limpando campos, criando pesquisa de dados (array filter) e
+colocando botão de exclusão de forma dinâmica.
+--------------------------------------------------------------
+
+
+ES6 E ORIENTAÇÃO OBJETOS
+
+1- Var e Let (Var sobe a variável, já o let preserva o escopo(Recomendável 
+usar let)), sobreposição
+2- Operador Const (Impede que o operador o modifique, 
+serve quando você não quiser modoificar o valor durante a aplicação)
+3- Template string (O template string é uma janela que permite o 
+interpretador de calcular a concatenação (Expressões embutidas))
+4- Atribuindo valores à variáveis dentro da function (Parâmetros default)
+5- Arrow Function (Forma enxuta da function e do if/else)
+6/7- Orientação Objeto - Abstração (Exercício cadeira e sofá e Banco, 
+this = refere-se ao objeto)
+8- Encapsulamento (Getters (pega valor) e Setters(altera valor), privado)
+9- Herança (Extends e super)
+10- Super (Ligação dos constructores)
+11- Polimorfismo (Sobrescrever elementos no filho)
+12- Formas de escrever objetos literais
+13- Objeto Literal com melhorias
+14- Modificando valores do Objeto Literal
+15- Criação dinâmica de pares/valores
+16- Objetos únicos (não duplica quando é atribuído a uma var e 
+sim faz outra referência de caminho
+17- Função construtora (outro método da orientação objeto)
+18- Encapsulamento para privar (var) (o valor e não ser possível aterá-lo 
+depois (não irá aparecer no console log), ultrapassando seu limite)
+19- Função Factory (Não precisar várias vezes mandar o mesmo parâmetro 
+pro HTTP)
+20- Prototype (modelo, padrão, primeiro tipo de um exemplar), objeto literal,
+função construtora e classe
+21- Herdando Prototype (prototype chain, __proto__)
+22- Spread e Rest (Espalhar e juntar (...), colocando índices de Arrays juntos)
+23- Destructuring Assignment (tirar valor de dentro da estrutura, 
+array e objeto)
+24- Destructuring + Rest
+
+EXTRA 
+STORAGE: Locais onde armazenam dados no lado do cliente (e não do lado do 
+servidor igual o MYSQL)
+- Local Storage (Utilizado no projeto)
+- Session Storage (perde os dados)
+- IndexedDB
+- Web SQL (para dados mais complexos)
+- Cookies
+JSON: STRING (Objetos literais não podem ser transitados para o 
+bd do cliente)
